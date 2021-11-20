@@ -7,11 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Person Generator</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <div id="app">
-        <h1>{{ message }}</h1>
+        <div class="card">
+            <img :src="picturePath" class="avatar">
+            <h1>{{ fullname }}</h1>
+            <div class="info">
+                <i class="fa fa-user"></i>
+                <h3>{{ username }}</h3>
+            </div>
+            <div class="info">
+                <i class="fa fa-at"></i>
+                <h3>{{ email }}</h3>
+            </div>
+            <div class="info">
+                <i class="fa fa-birthday-cake"></i>
+                <h3>{{ dob }}</h3>
+            </div>
+            <div class="info">
+                <i :class="genderIcon"></i>
+                <h3>{{ gender }}</h3>
+            </div>
+            <div class="info">
+                <i class="fa fa-map-marker-alt"></i>
+                <h3>{{ address }}</h3>
+            </div>
+            <button v-on:click="getPerson()">Get a Random Person</button>
+        </div>
     </div>
 </body>
 <script src="https://unpkg.com/vue@next"></script>
