@@ -1,7 +1,7 @@
 const App = {
     data() {
       return {
-        message: "Hello Vue.js!"
+        message: "Hello Vue.js!!"
       }
     },
   }
